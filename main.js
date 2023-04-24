@@ -1,2 +1,3 @@
-console.log("Olá, mundo!");
-console.log("Navegando pelo console do navegador");
+//alert("Olá");
+
+document.write("Texto escrito utilizando JavaScript.");
