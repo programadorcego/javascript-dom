@@ -1,0 +1,1 @@
+alert("Arrquivo externo carregado!");
