@@ -1,25 +1,14 @@
 /*
-No JavaScript também é possível acessar, alterar ou remover atributos de elementos HTML.
-Para isso utilizamos os métodos:
-1. `getAttribute(nomeDoAtributo)`: retorna o valor de um atributo específico de um elemento HTML.
-2. `setAttribute(nomeDoAtributo, valor)`: define o valor de um atributo específico em um elemento HTML.
-3. `hasAttribute(nomeDoAtributo)`: verifica se um elemento HTML tem um atributo específico.
-4. `removeAttribute(nomeDoAtributo)`: remove um atributo específico de um elemento HTML.
-5. `attributes`: retorna uma coleção com todos os atributos de um elmento HTML.
+No JavaScript é possível selecionarmos elementos HTML com base no seletor CSS.
+Os métodos para isso são:
+1. `document.querySelector(seletorCSS)`: retorna o primeiro elemento que corresponde a um seletor CSS especificado.
+2. `document.querySelectorAll(seletorCSS)`: retorna uma lista de todos os elementos que correspondem a um seletor CSS especificado.
 */
-element = document.getElementById('link');
 
-// Recuperando valor de atributo
-console.log(element.getAttribute('href'));
+//let element = document.querySelector('.text');
+//console.log(element);
 
-// Adicionando um atributo
-element.setAttribute('target', '_blank');
+let element = document.querySelectorAll('#main p.text');
+console.log(element);
 
-// Removendo Atributo
-//element.removeAttribute('href');
-
-// Verificando se atributo existe
-//console.log(element.hasAttribute('class'));
-
-// Retornando todos os atributos
-console.log(element.attributes);
+element[0].innerText = "Outro Texto";
