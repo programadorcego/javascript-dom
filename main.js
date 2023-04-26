@@ -1,14 +1,10 @@
-/*
-No JavaScript é possível selecionarmos elementos HTML com base no seletor CSS.
-Os métodos para isso são:
-1. `document.querySelector(seletorCSS)`: retorna o primeiro elemento que corresponde a um seletor CSS especificado.
-2. `document.querySelectorAll(seletorCSS)`: retorna uma lista de todos os elementos que correspondem a um seletor CSS especificado.
-*/
+let container = document.querySelector('.container');
 
-//let element = document.querySelector('.text');
-//console.log(element);
+// Criando Elementos
+let article = document.createElement('article');
+article.setAttribute('class', 'article');
+article.innerHTML = '<h1>Título do Artigo</h1>';
+article.innerHTML += '<p>Texto do Artigo</p>';
 
-let element = document.querySelectorAll('#main p.text');
-console.log(element);
-
-element[0].innerText = "Outro Texto";
+// Adicionando Elemento
+container.appendChild(article);
