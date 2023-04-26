@@ -1,10 +1,25 @@
-// O método getElements recupera uma coleção de elementos HTML com base em um seletor CSS.
+/*
+No JavaScript também é possível acessar, alterar ou remover atributos de elementos HTML.
+Para isso utilizamos os métodos:
+1. `getAttribute(nomeDoAtributo)`: retorna o valor de um atributo específico de um elemento HTML.
+2. `setAttribute(nomeDoAtributo, valor)`: define o valor de um atributo específico em um elemento HTML.
+3. `hasAttribute(nomeDoAtributo)`: verifica se um elemento HTML tem um atributo específico.
+4. `removeAttribute(nomeDoAtributo)`: remove um atributo específico de um elemento HTML.
+5. `attributes`: retorna uma coleção com todos os atributos de um elmento HTML.
+*/
+element = document.getElementById('link');
 
-//let e = document.getElementsByClassName('text');
-//console.log(e);
+// Recuperando valor de atributo
+console.log(element.getAttribute('href'));
 
-//e[4].innerText = "Texto Alterado";
+// Adicionando um atributo
+element.setAttribute('target', '_blank');
 
-let e = document.getElementsByTagName('p');
-//console.log(e);
-e[0].innerText = "Primeiro texto alterado";
+// Removendo Atributo
+//element.removeAttribute('href');
+
+// Verificando se atributo existe
+//console.log(element.hasAttribute('class'));
+
+// Retornando todos os atributos
+console.log(element.attributes);
