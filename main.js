@@ -1,10 +1,15 @@
 let container = document.querySelector('.container');
+let novoElemento = document.createElement('p');
+novoElemento.innerText = 'Meu Texto';
 
-// Criando Elementos
-let article = document.createElement('article');
-article.setAttribute('class', 'article');
-article.innerHTML = '<h1>Título do Artigo</h1>';
-article.innerHTML += '<p>Texto do Artigo</p>';
+// Inserindo antes
+//container.before(novoElemento);
 
-// Adicionando Elemento
-container.appendChild(article);
+// Inserindo Depois
+//container.after(novoElemento);
+
+// Inserir no começo do container
+//container.prepend(novoElemento);
+
+// Inserindo no final do container
+container.append(novoElemento);
