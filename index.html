@@ -1,26 +1,24 @@
-
 <!doctype html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<title>JavaScript DOM</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		<style>
-			.text {font-size: 20px;}
-		</style>
 	</head>
 	
 	<body>
-		<section id="main">
-			<article id="article">
-				<p class="text">Texto 1</p>
-				<p class="text">Texto 2</p>
-				<p class="text">Texto 3</p>
-				<p class="text">Texto 4</p>
-				<p class="text">Texto 5</p>
-			</article>
-		</section>
+		<form action="" method="POST" class="form">
+			<div>
+				<label for="nome">Nome *</label>
+				<input type="text" name="nome" id="nome" required>
+			</div>
+			
+			<div>
+				<button>Enviar</button>
+			</div>
+		</form>
+		
+		<div class="texto"></div>
 		
 		<script src="main.js"></script>
 	</body>
