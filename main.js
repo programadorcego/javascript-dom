@@ -1,18 +1,16 @@
 /*
-A partir do HTML existente, ler o preço de um produto de uma loja 
-e informar as opções de pagamento da loja.
-Calcule e informe o valor para pagamento à vista com 10% de desconto e o valor em 3x.
+No JavaScript também é possível manipularmos as classes CSS de um elemento HTML.
+Para isso utilizamos as propriedades:
+1. className: retorna ou define a lista de classes CSS de um elemento HTML como uma string.
+2. classList: retorna um objeto que representa a lista de classes CSS de um elemento HTML. Podemos usar métodos como `add()`, `remove()`, `toggle()`, `contains()` e `replace()` para adicionar, remover, alternar, verificar e substituir classes específicas.
 */
 
-document.querySelector('.btn').addEventListener('click', () => {
-	const preco = document.querySelector('#preco');
-	
-	let vista = parseFloat(preco.value.replace(',', '.')) - (parseFloat(preco.value.replace(',', '.')) * 0.1);
-	let parcela = parseFloat(preco.value.replace(',', '.')) / 3;
-	
-	document.querySelector('.resultado').innerHTML = `
-		<p>Preço: R$ ${parseFloat(preco.value.replace(',', '.')).toFixed(2).replace('.', ',')}</p>
-		<p>A Vista: R$ ${vista.toFixed(2).replace('.', ',')}</p>
-		<p>ou 3x de R$ ${parcela.toFixed(2).replace('.', ',')}</p>
-	`;
-});
+let element = document.querySelector('.container');
+//console.log(element.className);
+
+//console.log(element.classList);
+
+element.classList.remove('container-dark');
+element.classList.add('container-light');
+console.log(element.classList.contains('container-light'));
+element.classList.toggle('invisivel');
