@@ -1,17 +1,18 @@
 /*
-A partir do HTML existente, ler o valor total de uma conta de uma pizzaria 
-e quantos clientes vão pagá-la.
-Calcule e informe o valor a ser pago por cliente.
+A partir do HTML existente, ler o preço de um produto de uma loja 
+e informar as opções de pagamento da loja.
+Calcule e informe o valor para pagamento à vista com 10% de desconto e o valor em 3x.
 */
 
 document.querySelector('.btn').addEventListener('click', () => {
-	const total = document.querySelector('#total');
-	const clientes = document.querySelector('#clientes');
-	let total_cliente = parseFloat(total.value.replace(',', '.')) / parseInt(clientes.value);
+	const preco = document.querySelector('#preco');
+	
+	let vista = parseFloat(preco.value.replace(',', '.')) - (parseFloat(preco.value.replace(',', '.')) * 0.1);
+	let parcela = parseFloat(preco.value.replace(',', '.')) / 3;
 	
 	document.querySelector('.resultado').innerHTML = `
-		<p>Valor da Conta: R$ ${parseFloat(total.value.replace(',', '.')).toFixed(2).replace('.', ',')}</p>
-		<p>Número de Clientes: ${clientes.value}</p>
-		<p>Valor por Cliente: R$ ${total_cliente.toFixed(2).replace('.', ',')}</p>
+		<p>Preço: R$ ${parseFloat(preco.value.replace(',', '.')).toFixed(2).replace('.', ',')}</p>
+		<p>A Vista: R$ ${vista.toFixed(2).replace('.', ',')}</p>
+		<p>ou 3x de R$ ${parcela.toFixed(2).replace('.', ',')}</p>
 	`;
 });
